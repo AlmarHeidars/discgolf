@@ -1,7 +1,7 @@
 <?php 
 $pageTitle = "Disc Collection";
-include("inc/header.php"); ?>
+include 'inc/header.php'; ?>
 
-<?php include("inc/footer.php"); ?>
+<?php include'inc/footer.php'; ?>
 
 

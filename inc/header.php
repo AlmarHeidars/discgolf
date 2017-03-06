@@ -1,3 +1,5 @@
+<?php include 'functions.php'; ?>
+
 <html>
 <head>
     <title><?php echo $pageTitle; ?></title>

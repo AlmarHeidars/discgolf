@@ -1,17 +1,22 @@
 /*global*/
 
-a:link, a:hover, a:visited, a:active {
+a:link, 
+a:hover, 
+a:visited, 
+a:active {
     color: black;
     text-decoration: none;
 }
 
 /*class*/
-.nav, .footer {
+.nav, 
+.footer {
     list-style: none;
-    /*text-align: right; */
+    text-align: right; 
 }
 
-.nav li, .footer li{
+.nav li, 
+.footer li{
     display: inline;
 }
 
@@ -20,3 +25,7 @@ a:link, a:hover, a:visited, a:active {
 }
 
 /*id*/
+
+#collection li {
+    list-style-type: none;
+}

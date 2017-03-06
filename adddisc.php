@@ -1,6 +1,6 @@
 <?php 
 $pageTitle = "Add New Disc";
-include("inc/header.php"); ?>
+include'inc/header.php'; ?>
 
 <div class="section page">
     <div class="wrapper">
@@ -78,4 +78,4 @@ include("inc/header.php"); ?>
     </div>
 </div>
 
-<?php include("inc/footer.php"); ?>
+<?php include'inc/footer.php'; ?>
