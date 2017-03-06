@@ -8,7 +8,4 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo $e->getMessage();
     exit;
 }
-
-echo "Connected to the database";
-
 ?>
