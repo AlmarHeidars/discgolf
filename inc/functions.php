@@ -31,7 +31,7 @@ function addDisc($id, $name, $brand, $type, $skill, $stability, $speed, $glide, 
         $statement->bindParam(":turn", $turn);
         $statement->bindParam(":fade", $fade);
         $statement->bindParam(":weight", $weight);
-        $statement->bindParam("plasitc", $plastic);
+        $statement->bindParam(":plastic", $plastic);
         $statement->bindParam(":info", $info);
         $result = $statement->execute();
 
@@ -43,4 +43,14 @@ function addDisc($id, $name, $brand, $type, $skill, $stability, $speed, $glide, 
     }
 }
 
+// function deleteDisc() {
+//     include 'connection.php';
+
+//     try {
+//         // DELETE FROM `discs` WHERE 1
+//     } catch (Exception $e) {
+//         echo "Error: " . $e->getMessage() . PHP_EOL;
+//         return false;
+//     }
+// }
 ?>
