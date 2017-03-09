@@ -5,7 +5,7 @@ include'inc/header.php'; ?>
 <div class="section page">
     <div class="wrapper">
         <h2>Add New Disc</h2>
-        <p>Fill out the form to add a new disc to the collection.</p>
+        <p>Add a new disc to the collection.</p>
         <form method="post" action="process.php">
             <table>
                 <tr>
