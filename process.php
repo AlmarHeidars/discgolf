@@ -9,6 +9,7 @@ $speed = $_POST["speed"];
 $glide = $_POST["glide"];
 $turn = $_POST["turn"];
 $fade = $_POST["fade"];
+$weight = $_POST["weight"];
 $plastic = $_POST["plastic"];
 $info = $_POST["info"];
 
@@ -22,6 +23,7 @@ echo "<pre>";
     echo $glide . PHP_EOL;
     echo $turn . PHP_EOL;
     echo $fade . PHP_EOL;
+    echo $weight . PHP_EOL;
     echo $plastic . PHP_EOL;
     echo $info . PHP_EOL;
 echo "</pre>";
