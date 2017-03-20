@@ -1,5 +1,4 @@
 <?php
-//require 'inc/functions.php';
 $pageTitle = "Add New Disc";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

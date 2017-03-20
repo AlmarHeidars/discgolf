@@ -1,4 +1,4 @@
-<?php include 'functions.php'; ?>
+<?php require 'functions.php'; ?>
 
 <html>
 <head>
@@ -9,8 +9,8 @@
     <div class="wrapper">
         <h1><a href="/discgolf/index.php">Disc Collection</a></h1>
         <ul class="nav">
-            <li><a href="collection.php">Collection</li>
-            <li><a href="adddisc.php">AddDisc</li>
+            <li><a href="collection.php">Collection</a></li>
+            <li><a href="adddisc.php">AddDisc</a></li>
         </ul>
     </div>
 <div id="content">
