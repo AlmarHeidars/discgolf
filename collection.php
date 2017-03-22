@@ -1,6 +1,22 @@
 <?php 
 $pageTitle = "Disc Collection";
 include 'inc/header.php'; 
+//functions.php included in the header.php
+
+if (isset($_POST['delete'])) {
+    if(delete_disc(filter_input(INPUT_POST, 'delete', FILTER_SANITIZE_NUMBER_INT))) {
+        header('location: collection.php?msg=Task+Deleted');
+        exit;
+    } else {
+        header('location: task_list.php?Unable+to+Delete+Disc');
+        exit;
+    }
+}
+// if (isset($_GET['msg'])) {
+//     $error_message = trim(filter_input(INPUT_GET, 'msg', FILTER_SANITIZE_STRING));
+// }
+
+
 ?>
 
 <div>
@@ -24,6 +40,7 @@ include 'inc/header.php';
                 //     $disc['info'] . "</li>" . "_______________";
             }
             ?>
+            <!-- outputs list using disc variable possible  -->
         </ul>    
 </div>
 

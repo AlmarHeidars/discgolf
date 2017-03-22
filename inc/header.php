@@ -14,3 +14,5 @@
         </ul>
     </div>
 <div id="content">
+
+<!--Header isolated to be included in index-->

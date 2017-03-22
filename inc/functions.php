@@ -9,6 +9,7 @@ function getDiscList() {
         echo "Error: " . $e->getMessage() . PHP_EOL;
         return false;
     }
+// function will connect to databse with include, then use try-catch to run a query to select all discs in 'discs' database.
 }
 
 // function addDisc($id, $name, $brand, $type, $skill, $stability, $speed, $glide, $turn, $fade, $weight, $plastic, $info) {
@@ -69,16 +70,23 @@ function addDisc($id, $name, $brand, $type, $skill, $stability, $speed, $glide, 
         return false;
     }
     return true;
+    // function to add new disc to database. note bindvalue vs bindparam
 }
 
-// function deleteDisc() {
-//     include 'connection.php';
+function deleteDisc($id) {
+    include 'connection.php';
 
-//     try {
-//         // DELETE FROM `discs` WHERE 1
-//     } catch (Exception $e) {
-//         echo "Error: " . $e->getMessage() . PHP_EOL;
-//         return false;
-//     }
-// }
+    try {
+        $sql = 'DELETE FROM discs WHERE id = ?';
+        $result->bindValue(1, $id, PDO::PARAM_INT);
+        $result = $db->prepare($sql);
+        $result->execute();
+
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage() . PHP_EOL;
+        return false;
+    }
+    return true;
+    // delete function that will connect to 'discs' databse and run query to delete item based on the id number provided.
+}
 ?>

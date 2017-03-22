@@ -9,4 +9,6 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo $e->getMessage();
     exit;
 }
+
+// connection to 'discgolf' databse in a try-catch that will echo error if connection is not made.
 ?>

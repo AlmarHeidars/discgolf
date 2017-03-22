@@ -27,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
        }
    }
 }
-
+// if new info is 'posted' checks for all fields filled and returns error message if not and redirect to collection.php if so.
+// if not able to redirect will show error message that could not add the project.
 include'inc/header.php';
 ?>
 
@@ -112,5 +113,6 @@ include'inc/header.php';
         </form>
     </div>
 </div>
+<!-- form to be used to add itemized info about a disc to the database. -->
 
 <?php include'inc/footer.php'; ?>

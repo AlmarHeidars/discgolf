@@ -22,19 +22,3 @@ a:active {
 .wrapper {
     background: lightblue;
 }
-
-/*id*/
-
-/*.collection {
-  -webkit-column-width: 150px;
-  -moz-column-width: 150px;
-  -o-column-width: 150px;
-  -ms-column-width: 150px;
-  column-width: 150px;
-  
-  -webkit-column-rule-style: solid;
-  -moz-column-rule-style: solid;
-  -o-column-rule-style: solid;
-  -ms-column-rule-style: solid;
-  column-rule-style: solid;
-}*/
