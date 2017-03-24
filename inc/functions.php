@@ -7,7 +7,7 @@ function getDiscList() {
         return $db->query('SELECT * FROM discs');
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage() . PHP_EOL;
-        return false;
+        return array();
     }
 // function will connect to databse with include, then use try-catch to run a query to select all discs in 'discs' database.
 }
@@ -45,10 +45,10 @@ function getDiscList() {
 function addDisc($id, $name, $brand, $type, $skill, $stability, $speed, $glide, $turn, $fade, $weight, $plastic, $info) {
     include 'connection.php';
 
-    try{
+        $sql='INSERT INTO discs (name,brand,type,skill,stability,speed,glide,turn,fade,weight,plastic,info) 
+              VALUES (?,?,?,?,?,?,?,?,?,?,?,?)';
 
-        $sql="INSERT INTO discs (name,brand,type,skill,stability,speed,glide,turn,fade,weight,plastic,info) 
-              VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+    try{
 
         $statement = $db->prepare($sql);
         $statement->bindValue(1, $name, PDO::PARAM_STR);
@@ -66,11 +66,11 @@ function addDisc($id, $name, $brand, $type, $skill, $stability, $speed, $glide, 
         $result = $statement->execute();
 
     } catch (Exception $e) {
-        echo "Error: " . $e->getMessage() . PHP_EOL;
+        echo "Error: " . $e->getMessage() . "<br />";
         return false;
     }
     return true;
-    // function to add new disc to database. note bindvalue vs bindparam
+    // function to add new disc to database.
 }
 
 function deleteDisc($id) {
