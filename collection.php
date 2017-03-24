@@ -1,4 +1,5 @@
-<?php 
+<?php
+require 'inc/functions.php'; 
 $pageTitle = "Disc Collection";
 include 'inc/header.php'; 
 //functions.php included in the header.php

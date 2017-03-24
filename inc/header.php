@@ -1,5 +1,3 @@
-<!--<?php require 'functions.php'; ?>-->
-
 <html>
 <head>
     <title><?php echo $pageTitle; ?></title>
@@ -13,6 +11,6 @@
             <li><a href="adddisc.php">AddDisc</a></li>
         </ul>
     </div>
-<div id="content">
+<div class="content" id="content">
 
 <!--Header isolated to be included in index-->

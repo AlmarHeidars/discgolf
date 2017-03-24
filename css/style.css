@@ -22,3 +22,9 @@ a:active {
 .wrapper {
     background: lightblue;
 }
+
+/*id*/
+
+#content {
+    background: lightblue;
+}

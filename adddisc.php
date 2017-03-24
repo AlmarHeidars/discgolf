@@ -1,4 +1,5 @@
 <?php
+require 'inc/functions.php';
 $pageTitle = "Add New Disc";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -19,17 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    empty($glide) || empty($turn) || empty($fade) || empty($weight) ||empty($plastic) || empty($info)) {
        $error_message = 'Please fill in all the fields.';
    } else {
-       echo "name = $name<br />";
-       echo "brand = $brand<br />;";
-
-   }
-    //    if (addDisc($name, $brand, $type, $skill, $stability, $speed, $glide, $turn, $fade, $weight, $plastic, $info)) {
-    //        header('Location: collection.php');
-    //        exit;
-    //    } else {
-    //        $error_message = 'Could not add project';
-    //    }
-}
+       if (addDisc($name, $brand, $type, $skill, $stability, $speed, $glide, $turn, $fade, $weight, $plastic, $info)) {
+           header('Location: collection.php');
+           exit;
+       } else {
+           $error_message = 'Could not add project';
+       }
+}}
 // if new info is 'posted' checks for all fields filled and returns error message if not and redirect to collection.php if so.
 // if not able to redirect will show error message that could not add the project.
 include'inc/header.php';
@@ -92,7 +89,7 @@ include'inc/header.php';
                 </tr>
                 <tr>
                     <th><label for="info">Info</label></th>
-                    <td><textarea type="text" id="info" name="info"></textarea></td>
+                    <td><input type="text" id="info" name="info"></textarea></td>
                 </tr>
             </table>
             <input type="submit" value="Submit" />
@@ -101,4 +98,6 @@ include'inc/header.php';
 </div>
 <!-- form to be used to add itemized info about a disc to the database. -->
 
-<?php include'inc/footer.php'; ?>
+<?php 
+    include'inc/footer.php'; 
+    ?>
