@@ -8,19 +8,46 @@ a:active {
     text-decoration: none;
 }
 
+/*Navigation*/
+
+.name {
+    font-size:1.25em;
+}
+
+.name {
+    text-align: center;
+    background: white;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+}
+
+.main-nav{
+    font-size: .95em;
+    color: #3acec2;
+    text-transform: uppercase;
+}
+
 /*class*/
-.nav, 
 .footer {
     list-style: none;
+    position: fixed;
+    bottom: 0;
 }
 
-.nav li, 
-.footer li{
-    display: inline;
+.main-container {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: top;
+    background: gray;
 }
 
-.wrapper {
-    background: lightblue;
+.collection,
+.collection li {
+    list-style: none;
+    padding: 0;
 }
 
 /*id*/

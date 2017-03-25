@@ -50,20 +50,20 @@ function addDisc($name, $brand, $type, $skill, $stability, $speed, $glide, $turn
 
     try{
 
-        $results = $db->prepare($sql);
-        $results->bindValue(1, $name, PDO::PARAM_STR);
-        $results->bindValue(2, $brand, PDO::PARAM_STR);
-        $results->bindValue(3, $type, PDO::PARAM_STR);
-        $results->bindValue(4, $skill, PDO::PARAM_STR);
-        $results->bindValue(5, $stability, PDO::PARAM_STR);
-        $results->bindValue(6, $speed, PDO::PARAM_INT);
-        $results->bindValue(7, $glide, PDO::PARAM_INT);
-        $results->bindValue(8, $turn, PDO::PARAM_INT);
-        $results->bindValue(9, $fade, PDO::PARAM_INT);
-        $results->bindValue(10, $weight, PDO::PARAM_INT);
-        $results->bindValue(11, $plastic, PDO::PARAM_STR);
-        $results->bindValue(12, $info, PDO::PARAM_STR);
-        $results->execute();
+        $statement = $db->prepare($sql);
+        $statement->bindValue(1, $name, PDO::PARAM_STR);
+        $statement->bindValue(2, $brand, PDO::PARAM_STR);
+        $statement->bindValue(3, $type, PDO::PARAM_STR);
+        $statement->bindValue(4, $skill, PDO::PARAM_STR);
+        $statement->bindValue(5, $stability, PDO::PARAM_STR);
+        $statement->bindValue(6, $speed, PDO::PARAM_INT);
+        $statement->bindValue(7, $glide, PDO::PARAM_INT);
+        $statement->bindValue(8, $turn, PDO::PARAM_INT);
+        $statement->bindValue(9, $fade, PDO::PARAM_INT);
+        $statement->bindValue(10, $weight, PDO::PARAM_INT);
+        $statement->bindValue(11, $plastic, PDO::PARAM_STR);
+        $statement->bindValue(12, $info, PDO::PARAM_STR);
+        $results = $statement->execute();
 
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage() . "<br />";

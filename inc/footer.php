@@ -1,5 +1,5 @@
 </div> 
-    <div class="wrapper">
+    <div class="footer">
         <p>&copy;<?php echo date("Y"); ?> Disc Collection</p>
     </div>
 </body>
