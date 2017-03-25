@@ -31,20 +31,20 @@ body {
 }
 
 /* ===================
-    ALL: Orange Theme
+    ALL: Blue Theme
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #e44d26;
+    border-bottom: 20px solid cornflowerblue;
 }
 
 .footer-container {
-    border-top: 20px solid #e44d26;
+    border-top: 20px solid cornflowerblue;
 }
 
 .header-container,
 .footer-container{
-    background: #f16529;
+    background: lightblue;
 }
 
 .title {
@@ -70,7 +70,7 @@ nav a {
     font-weight: bold;
 
     color: white;
-    background: #e44d26;
+    background: cornflowerblue;
 }
 
 /* ==============
@@ -116,6 +116,10 @@ a:active {
 
 .collection-title {
     text-align: center;
+}
+
+.discitem {
+
 }
 
 

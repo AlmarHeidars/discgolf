@@ -76,14 +76,14 @@ function addDisc($name, $brand, $type, $skill, $stability, $speed, $glide, $turn
 function deleteDisc($id) {
     include 'connection.php';
 
-    try {
-        $sql = 'DELETE FROM discs WHERE id = ?';
-        $result->bindValue(1, $id, PDO::PARAM_INT);
-        $result = $db->prepare($sql);
-        $result->execute();
+    $sql = 'DELETE FROM discs WHERE id = ?';
 
+    try {
+        $results = $db->prepare($sql);
+        $results->bindValue(1, $id, PDO::PARAM_INT);
+        $results->execute();
     } catch (Exception $e) {
-        echo "Error: " . $e->getMessage() . PHP_EOL;
+        echo "Error: " . $e->getMessage() . "<br />";
         return false;
     }
     return true;

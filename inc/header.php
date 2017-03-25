@@ -13,7 +13,7 @@
 
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title"><a href="/initializr/index.php">Disc Collection</a></h1>
+                <h1 class="title"><a href="/discgolf/index.php">Disc Collection</a></h1>
                 <nav>
                     <ul>
                         <li><a href="collection.php">Collection</a></li>
