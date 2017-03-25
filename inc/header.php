@@ -1,17 +1,26 @@
-<html>
-<head>
-    <title><?php echo $pageTitle; ?></title>
-    <link rel="stylesheet" href="css/style.css" type"text/css">
-</head>
-<header class="main-header">
-    <div class="container">
-        <h1 class="name"><a href="/discgolf/index.php">Disc Collection</a></h1>
-        <ul class="main-nav">
-            <li><a href="collection.php">Collection</a></li>
-            <li><a href="adddisc.php">AddDisc</a></li>
-        </ul>
-    </div>
-</header>
-<div id="content">
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title><?php echo $pageTitle; ?></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--Header isolated to be included in index-->
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title"><a href="/initializr/index.php">Disc Collection</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="collection.php">Collection</a></li>
+                        <li><a href="adddisc.php">Add Disc</a></li>
+                    </ul> 
+                </nav>
+            </header>
+        </div>
+
+        <!--Header isolated to be included in index-->

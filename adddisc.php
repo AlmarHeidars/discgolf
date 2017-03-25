@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 include'inc/header.php';
 ?>
 
-<div class="section page">
+<div>
     <div class="wrapper">
         <?php 
         if (isset($error_message)) {
