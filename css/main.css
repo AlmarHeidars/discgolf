@@ -118,7 +118,14 @@ a:active {
     text-align: center;
 }
 
-.discitem {
+/*.discitem {
+    column-count: 3;
+}*/
+
+.delete-button {
+    font-weight: bold;
+    color: cornflowerblue;
+    display: inline-block;
 
 }
 
@@ -166,6 +173,9 @@ a:active {
     .oldie nav a {
         margin: 0 0.7%;
     }
+    .discitem {
+    column-count: 1;
+}
 }
 
 @media only screen and (min-width: 768px) {
@@ -201,6 +211,9 @@ a:active {
         float: left;
         width: 57%;
     }
+    .discitem {
+    column-count: 2;
+}
 
 }
 
@@ -214,6 +227,9 @@ a:active {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
     }
+    .discitem {
+    column-count: 3;
+}
 }
 
 /* ==========================================================================

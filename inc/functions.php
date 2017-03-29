@@ -62,7 +62,7 @@ function addDisc($name, $brand, $type, $skill, $stability, $speed, $glide, $turn
         $statement->bindValue(9, $fade, PDO::PARAM_INT);
         $statement->bindValue(10, $weight, PDO::PARAM_INT);
         $statement->bindValue(11, $plastic, PDO::PARAM_STR);
-        $statement->bindValue(12, $info, PDO::PARAM_STR);
+        $statement->bindValue(12, $info, PDO::PARAM_STR); 
         $results = $statement->execute();
 
     } catch (Exception $e) {
