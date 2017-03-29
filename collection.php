@@ -10,7 +10,7 @@ if(isset($_POST['delete'])) {
         header('location: collection.php?msg=Unable+to+Delete+Disc');
         exit;
     }
-    // if delete button clicked then will call function to delete instance of disc
+    // if delete button clicked then will call function to delete instance of disc and write able or unable to delte to header
 }
 if(isset($_GET['msg'])) {
     $error_message = trim(filter_input(INPUT_GET, 'msg', FILTER_SANITIZE_STRING));
@@ -29,16 +29,16 @@ include 'inc/header.php';
         <ul>
             <?php 
             foreach (getDiscList() as $disc) {
+            echo "<header>\n";
+            echo   "<h1>" . $disc['name'] . " - " . $disc['brand'] . "</h1>\n";
+            echo "</header>\n";
             echo "<div class='discitem'>\n";
-            echo    "<header>\n";
-            echo      "<h1>" . $disc['name'] . " - " . $disc['brand'] . "</h1>\n";
-            echo    "</header>\n";
             echo    "<div>";
             echo          "<p>" . "<ul class='disclist'>
-                                    <li>" . $disc['type'] . "</li>
-                                    <li>" . $disc['skill'] . "</li>
-                                    <li>" . $disc['stability'] . "</li>
-                                    <li>" . $disc['plastic'] . "</li>
+                                    <li>" . "Type: " . $disc['type'] . "</li>
+                                    <li>" . "Skill: " . $disc['skill'] . "</li>
+                                    <li>" . "Stability: " . $disc['stability'] . "</li>
+                                    <li>" . "Plastic: " . $disc['plastic'] . "</li>
                                   </ul>" . "</p>\n";
             echo    "</div>\n";
             echo    "<div>\n";
@@ -47,15 +47,11 @@ include 'inc/header.php';
                                     <li>" . "Glide: " . $disc['glide'] . "</li>
                                     <li>" . "Turn: " . $disc['turn'] . "</li>
                                     <li>" . "Fade: " . $disc['fade'] . "</li>
-                                </ul>" . "</p>\n";
-            echo    "</div>\n";
-            echo    "<div>\n";
-            echo      "<p>" . "<ul class='disclist'>
                                     <li>" . "Weight: " . $disc['weight'] . "g" . "</li>
-                                    <li>" . $disc['info'] . "</li>
                                 </ul>" . "</p>\n";
             echo    "</div>\n";
             echo "</div>\n";
+            echo $disc['info'] . "\n" . PHP_EOL;
                 // outputs list using disc variable and accessing properties  
 
 
@@ -63,9 +59,9 @@ include 'inc/header.php';
             echo "<input type='hidden' value='" . $disc['id'] . "' name='delete'/>\n";
             echo "<input type='submit' value='Delete' />\n";
             echo "</form>";
-            // button to delete a disc off of collection. hidden button using post
+            // button to delete a disc off of collection. hidden from, button using post
             }
-            ?>0
+            ?>
              
         </ul>    
 </div>
